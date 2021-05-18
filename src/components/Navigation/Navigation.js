@@ -9,7 +9,6 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 const Navigation = () => {
   return (
     <Nav>
-      <ul>
         <Brand>
           <NavIcon>
             <Anchor href="#home">
@@ -40,32 +39,36 @@ const Navigation = () => {
             </Anchor>
           </Notifications>
         </NavLink>
-      </ul>
     </Nav>
   );
 };
 
 export default Navigation;
 
-const Nav = styled.div``;
+const Nav = styled.div`
+display: flex;
+justify-content: space-between;
+`;
 const Brand = styled.div`
-  float: left;
   display: flex;
-`;
-const NavLink = styled.div`
-  float: Right;
-  display: flex;
-`;
-const Anchor = styled.a`
-  text-decoration: none;
+  align-items: center;
 `;
 const BrandName = styled.a`
   margin-top: 10px;
 `;
 const NavIcon = styled.li`
-  margin-right: 15px;
+  margin: 15px 20px;
   list-style: none;
 `;
+const NavLink = styled.div`
+  float: Right;
+  display: flex;
+  align-items: center;
+`;
+const Anchor = styled.a`
+  text-decoration: none;
+`;
+
 const User = styled.li`
   margin-right: 45px;
   list-style: none;
@@ -89,4 +92,6 @@ const Notifications = styled.li`
   height: 36px;
   width: 36px;
 `;
-const Image = styled.img``;
+const Image = styled.img`
+
+`;
