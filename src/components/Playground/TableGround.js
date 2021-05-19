@@ -4,6 +4,7 @@ import styled from "styled-components";
 import editIcon from "../../assets/img/icons/editIcon.png";
 import deleteIcon from "../../assets/img/icons/deleteIcon.png";
 import TableView from "./TableView";
+import ManageTable from "./ManageTable";
 
 const TableGround = () => {
   return (
@@ -21,7 +22,8 @@ const TableGround = () => {
       </Nav>
     </Container>
     <TableContainer>
-    <TableView/>
+    {/* <TableView/> */}
+    <ManageTable/>
     </TableContainer>
     </Main>
   );
