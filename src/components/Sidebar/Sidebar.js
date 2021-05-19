@@ -23,7 +23,7 @@ const Sidebar = () => {
         <Icon>
           <Image src={securityIcon} alt="" />
         </Icon>
-        <Text>Access Control</Text>
+        <Text active selected>Access Control</Text>
       </Frame>
     </Main>
   );
@@ -36,6 +36,7 @@ height: 90vh;
 width: 310px;
 padding-top: 10px;
 background: #FCFBFF;
+float: left;
 `;
 const Frame = styled.div`
 display: flex;

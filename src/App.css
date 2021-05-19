@@ -1,3 +1,35 @@
 .app {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cellRight {
+  text-align: center !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-columnsContainer {
+  background: #f2f2f2;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell[data-value="All Access"] {
+  min-height: 30px !important;
+  line-height: 1rem !important;
+  text-align: center;
+  padding-top: 4px;
+  margin: auto 0;
+  background: rgba(39, 174, 96, 0.3);
+  border: 1px solid #27ae60;
+  box-sizing: border-box;
+  border-radius: 20px;
+  
+}
+.MuiDataGrid-root .MuiDataGrid-cell[data-value="Restricted Access"] {
+  min-height: 30px !important;
+  line-height: 1rem !important;
+  text-align: center;
+  padding-top: 4px;
+  margin: auto 0;
+  background: rgba(255, 8, 8, 0.3);
+  border: 1px solid #ff0808;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
