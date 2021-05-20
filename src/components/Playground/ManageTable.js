@@ -18,6 +18,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { Checkbox, FormGroup, Radio, RadioGroup, Switch } from "@material-ui/core";
+import ManageTableNavbar from "./ManageTableNavbar";
 
 const IOSSwitch = withStyles((theme) => ({
   root: {
@@ -44,12 +45,12 @@ const IOSSwitch = withStyles((theme) => ({
   },
   thumb: {
     width: 24,
-    height: 24,
+    height: 23,
   },
   track: {
     borderRadius: 26 / 2,
-    border: `1px solid ${theme.palette.grey[400]}`,
-    backgroundColor: theme.palette.grey[50],
+    border: `1px solid ${theme.palette.grey[600]}`,
+    backgroundColor: theme.palette.grey[100],
     opacity: 1,
     transition: theme.transitions.create(["background-color", "border"]),
   },
@@ -84,11 +85,7 @@ function createData(deptName, access, summery, lastUpdate) {
     deptName,
     access,
     summery,
-    lastUpdate,
-    history: [
-      { date: "2020-01-05", customerId: "11091700", amount: 3 },
-      { date: "2020-01-02", customerId: "Anonymous", amount: 1 },
-    ],
+    lastUpdate
   };
 }
 
@@ -125,8 +122,8 @@ function Row(props) {
   } else {
     classes.access = {
       display: "block",
-      minHeight: "30px !important",
-      lineHeight: "1rem !important",
+      minHeight: "30px",
+      lineHeight: "1rem",
       padding: "10px 25px",
       margin: " auto 0",
       background: "#F2F2F2",
@@ -161,8 +158,8 @@ function Row(props) {
 
   return (
     <React.Fragment>
-      <TableRow className={classes.root}>
-        <TableCell>
+      <TableRow  className={classes.root}>
+        <TableCell >
           <IconButton
             aria-label="expand row"
             size="small"
@@ -193,7 +190,7 @@ function Row(props) {
         </TableCell>
       </TableRow>
       <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+        <TableCell className="collapsible-area" colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box margin={1}>
               <Typography variant="p" gutterBottom component="div">
@@ -307,7 +304,7 @@ const rows = [
   createData(
     "Purchase Order/Work Order",
     "Restricted Access",
-    "View |Create",
+    "View | Create",
     "1 min ago"
   ),
   createData(
@@ -322,6 +319,7 @@ const rows = [
 const ManageTable = () => {
   return (
     <MainSection>
+      <ManageTableNavbar/>
       <TableContainer component={Paper}>
         <Table aria-label="collapsible table">
           <TableHead style={{ background: "#F2F2F2" }}>
@@ -355,7 +353,7 @@ const OpenCollapse = styled.div`
   display: flex;
 `;
 const LeftPart = styled.div`
-  width: 300px;
+  width: 250px;
   border-right: 1px solid #e0e0e0;
   padding-left: 133px;
   `;

@@ -1,36 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import RssFeed from '../../assets/img/icons/RssFeed.png';
-import ViewModule from '../../assets/img/icons/ViewModule.png';
-import SyncIcon from '../../assets/img/icons/SyncIcon.png';
 
-const SubNav = () => {
+const ManageTableNavbar = () => {
     return (
         <Main>
             <ActiveNavContainer>
             <Nav>
-                <Image src={RssFeed} alt="" />
-                <Text>Permissions</Text>
+                <Text>Access Control</Text>
             </Nav>
             </ActiveNavContainer>
             <Partition></Partition>
             <NavContainer>
             <Nav>
-                <Image src={ViewModule} alt="" />
-                <Text>Approval Matrix</Text>
+                <Text>Assigned Members</Text>
             </Nav>
             </NavContainer>
-            <UpdateInfo>
-            <Nav>
-                <Image src={SyncIcon} alt="" />
-                <Text>Last synced 15 mins ago</Text>
-            </Nav>
-            </UpdateInfo>
         </Main>
     );
 };
 
-export default SubNav;
+
+export default ManageTableNavbar;
 
 const Main = styled.div`
 margin-left: 20px; 
@@ -49,24 +39,18 @@ cursor: pointer;
 border-bottom: 5px solid white;
 border-bottom: 5px solid #673AB7;
 border-radius: 10px 10px 0px 0px;
+p{
+    color: #673AB7;
+}
 `
 const NavContainer = styled.div`
 display: inline-block;
 cursor: pointer;
 border-bottom: 5px solid white;
-&:hover, &:active { 
+&:hover, &:active, &:focus { 
     border-bottom: 5px solid #673AB7;
     border-radius: 10px 10px 0px 0px;
     }
-`
-
-const UpdateInfo = styled.div`
-float: right;
-margin-right: 87px;
-& p{
-    color: black;
-    font-size: 14px;
-}
 `
 const Nav = styled.div`
 display: flex;
@@ -74,10 +58,10 @@ align-items: center;
 padding: 4px;
 
 `
-const Image = styled.img`
-margin-right: 11px;
-`
 const Text = styled.p`
 font-size: 16px;
-color: #673AB7;
+color: black;
+&:hover {
+    color: #673AB7;
+}
 `

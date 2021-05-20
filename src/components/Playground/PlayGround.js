@@ -8,7 +8,6 @@ const PlayGround = () => {
         <Content>
             <SubNav/>
             <TableGround/>
-            
         </Content>
     );
 };
