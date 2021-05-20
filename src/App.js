@@ -18,7 +18,6 @@ function App() {
     
       <Navigation/>
       <Sidebar/>
-  
     <Switch>
     <route path="/AccessControl">
       <PlayGround/>
